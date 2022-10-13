@@ -1,5 +1,22 @@
 # Homework2
 
+## Required Libraries
+
+In order to run this notebook you will need pandas which is not included in the standard python library 
+
+This can be installed by using 
+`pip install pandas`
+
+## Data Descriptions
+There are two CSV files located in the data folder of this repository. Inside is politicians_by_country_SEPT2022.csv which is atable containing politicians names, their associated Wikipedia URL and their respective country. The second table is population_by_country_2022.csv which is a table of country names and thair population in millions. Along with just countries there are also countries associated regions assorted heirchicaly by indication through being capitialized. In the first rows you will notice WORLD, followed by AFRICA followed by NORTHERN AFRICA. This represents how Northern Africa is in Africa and Africa in the world.
+
+The outputs of this script will be two files by the name of wp_politicians_by_country.csv which will contain information about politicians, the revision id of their article, thearticle quality, the country they are in, its region, and its population as well. The other file named
+wp_countries-no_match.txt is a list of all of the countries that arent included in this analysis because data couldnt be found for them.
+
+## Resources
+- [WP10 resource](https://meta.wikimedia.org/wiki/Objective_Revision_Evaluation_Service/wp10): information about the model used in this analysis
+
+
 ## Research Implications
 
 During this project I had learned of some different pandas functions that made cleaning up the data a bit easier. I had also learned more about the process of Wikipedia article rating. It makes sense that the natural next step of a platform the size of Wikipedia would be to use some sort of model to perform content moderation of some capacity, but I was unaware of the amount of research that actually goes into this field. I had looked into each of the models before running the scraping query and I landed on wp10 because the page had featured metrics on the models performance. I thought this would be a good model to chose because whatever results I got from the analysis, I figured some baseline results would help to ease any of the suprises in the results. Apparently the model under the hood is just a random forest so nothing crazy under the hood. I had noticed another model which used a gradient boosting tree, however I valued the documentation of the wp10 model over the potential gains that might or might not be realized from another model.
